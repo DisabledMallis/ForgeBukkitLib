@@ -1,0 +1,6 @@
+name: KettleLib
+version: 0.0.1
+description: An open sourced library for checking if a server is running kettle & more
+author: Mallis
+main: com.DisabledMallis.KettleLib.Main
+api-version: 1.14
