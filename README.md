@@ -1,2 +1,2 @@
-# KettleLib
-A tiny library for detecting if a server is running Kettle &amp; some other small features.
+# FBLib
+A tiny library for detecting if a server is running a hybrid implementation and if so, which.
