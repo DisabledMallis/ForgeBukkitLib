@@ -1,12 +1,14 @@
-package com.DisabledMallis.KettleLib;
+package com.DisabledMallis.FBLib;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin{
+	boolean Kettle;
+	boolean Lava;
 	@Override
 	public void onEnable() {
-		new Log("Loading KettleLib...");
+		new Log("Loading ForgeBukkitLib...");
 		try {
 			Class.forName("net.minecraftforge.common.ForgeVersion");
 			new Log("Found Forge!");
@@ -16,7 +18,19 @@ public class Main extends JavaPlugin{
 				new Log("Kettle found!");
 			}
 			catch(ClassNotFoundException ex) {
-				new Log("Couldn't find Kettle. Disabling...");
+				new Log("Couldn't find Kettle.");
+				Kettle = false;
+			}
+			try {
+				Class.forName("org.lavapowered.lava.LavaInternal");
+				new Log("LavaPowered found!");
+			}
+			catch(ClassNotFoundException ex) {
+				new Log("Couldn't find LavaPowered.");
+				Lava = false;
+			}
+			if(Kettle == false && Lava == false) {
+				new Log("Unknown Forge Bukkit hybrid. Disabling...");
 				Bukkit.getPluginManager().disablePlugin(this);
 			}
 		}

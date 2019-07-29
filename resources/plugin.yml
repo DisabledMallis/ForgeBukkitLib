@@ -1,6 +1,6 @@
-name: KettleLib
+name: FBLib
 version: 0.0.1
-description: An open sourced library for checking if a server is running kettle & more
+description: An open sourced library for checking if a server is running kettle, lava and any future hybrid implementations when possible.
 author: Mallis
-main: com.DisabledMallis.KettleLib.Main
+main: com.DisabledMallis.FBLib.Main
 api-version: 1.14
